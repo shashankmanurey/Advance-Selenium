@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Excel temporary/lock files
+~$*.xlsx
+~$*.xls
+
+# Java compiled files
+*.class
