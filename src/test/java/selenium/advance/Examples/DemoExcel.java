@@ -8,7 +8,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class UsingExcelFile {
+public class DemoExcel {
     public static void main(String[] args) throws Exception{
         FileInputStream f = new FileInputStream("src/main/resources/DDT/Data.xlsx");
         Workbook w = WorkbookFactory.create(f);
@@ -24,8 +24,14 @@ public class UsingExcelFile {
 
         //value
         System.out.println(c.getStringCellValue());
+        String browser = sh.getRow(1).getCell(0).getStringCellValue();
+        String url = sh.getRow(1).getCell(1).getStringCellValue();
+        String username = sh.getRow(1).getCell(2).getStringCellValue();
+        String password = sh.getRow(1).getCell(3).getStringCellValue();
 
-        String password = w.getSheet("Sheet1").getRow(1).getCell(1).getStringCellValue();
+        System.out.println(browser);
+        System.out.println(url);
+        System.out.println(username);
         System.out.println(password);
     }
 }
