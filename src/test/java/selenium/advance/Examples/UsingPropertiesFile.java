@@ -17,7 +17,7 @@ public class UsingPropertiesFile {
         p.load(f);
 
         String Browser = p.getProperty("browser");
-        String URL = p.getProperty("url");
+        // String URL = p.getProperty("url");
         String USERNAME = p.getProperty("Username");
         String PASSWORD = p.getProperty("Password"); 
 
@@ -39,7 +39,7 @@ public class UsingPropertiesFile {
         d.manage().window().maximize();
         d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        d.get(URL);
+        d.get(p.getProperty("url"));
         d.findElement(By.id("user-name")).sendKeys(USERNAME);
         d.findElement(By.id("password")).sendKeys(PASSWORD);
         d.findElement(By.id("login-button")).click();
