@@ -49,14 +49,8 @@ public class OrangeVacTest extends OrangeBase1 {
         return obj;
     }
     @Test(dataProvider = "excel")
-    public void createVacancy(
-        String vacancyName,
-        String jobTitle,
-        String description,
-        String hiringManager,
-        String numberOfPositions
-    ) throws Exception {
-
+    public void createVacancy(String vacancyName, String jobTitle, String description, String hiringManager, String numberOfPositions) throws Exception 
+    {
         // Step 1: Login
         OrangeLogin login = new OrangeLogin(d);
 
